@@ -1,0 +1,14 @@
+{
+  "canonical_fixes": 12707,
+  "projects": 6,
+  "repair_operation_instances": 19965,
+  "logic_correction_and_adaptation_instances": 14702,
+  "logic_correction_and_adaptation_share": 0.7363886801903331,
+  "public_text_redactions": 0,
+  "excluded_from_public_export": [
+    "free-text PR descriptions and LLM reasoning",
+    "complete PR diffs",
+    "collection caches and logs",
+    "workspace backups and temporary files"
+  ]
+}

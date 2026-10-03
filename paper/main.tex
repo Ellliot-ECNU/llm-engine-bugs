@@ -1,0 +1,58 @@
+\documentclass[letterpaper,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\usepackage{diagbox}  % 引入斜线宏包
+\usepackage[hidelinks]{hyperref}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{Understanding the Structure and Evolution of Bug Maintenance in LLM Inference Engines}
+
+\author{\IEEEauthorblockN{Jiachen Liu\IEEEauthorrefmark{3}\textsuperscript{*}, Chaoning Zeng\IEEEauthorrefmark{3}\textsuperscript{*}, Chijin Zhou\IEEEauthorrefmark{3},
+Quan Zhang\IEEEauthorrefmark{3},
+Yu Jiang\IEEEauthorrefmark{4}, Geguang Pu\IEEEauthorrefmark{3} \\
+\IEEEauthorblockA{\IEEEauthorrefmark{3}School of Software Engineering, East China Normal University, Shanghai, China \\
+\IEEEauthorrefmark{4}School of Software, Tsinghua University, Beijing, China \\
+% \\
+}
+}
+\thanks{\textsuperscript{*}Jiachen Liu and Chaoning Zeng contributed equally to this work.}
+
+}
+% The paper headers
+% \markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2021}%
+% {Shell \MakeLowercase{\textit{et al.}}: A Sample Article Using IEEEtran.cls for IEEE Journals}
+
+% \IEEEpubid{0000--0000/00\$00.00~\copyright~2021 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\input{sections/0_abstract.tex}
+\input{sections/1_introduction.tex}
+\input{sections/2_background.tex}
+\input{sections/3_methodology.tex}
+\input{sections/4_results and analysis.tex}
+\input{sections/5_discussion.tex}
+\input{sections/6_related work.tex}
+\input{sections/7_conclusion.tex}
+
+\newpage
+\IEEEtriggeratref{45}
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+\end{document}

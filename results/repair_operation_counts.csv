@@ -1,0 +1,67 @@
+architectural_layer,repair_operation,count
+Build/Release,Adaptation,143
+Build/Release,Configuration,227
+Build/Release,Logic Correction,102
+Build/Release,Recovery,5
+Build/Release,Reorganization,31
+Build/Release,Synchronization,2
+Build/Release,Validation,15
+Compiler/Optimization,Adaptation,267
+Compiler/Optimization,Allocation,4
+Compiler/Optimization,Configuration,29
+Compiler/Optimization,Logic Correction,314
+Compiler/Optimization,Optimization,39
+Compiler/Optimization,Recovery,10
+Compiler/Optimization,Reorganization,17
+Compiler/Optimization,Synchronization,11
+Compiler/Optimization,Validation,31
+Config/Entrypoint,Adaptation,442
+Config/Entrypoint,Allocation,6
+Config/Entrypoint,Configuration,187
+Config/Entrypoint,Logic Correction,896
+Config/Entrypoint,Optimization,29
+Config/Entrypoint,Recovery,61
+Config/Entrypoint,Reorganization,158
+Config/Entrypoint,Synchronization,29
+Config/Entrypoint,Validation,231
+Docs,Adaptation,16
+Docs,Configuration,53
+Docs,Logic Correction,196
+Docs,Recovery,2
+Docs,Validation,1
+Hardware Adaptation,Adaptation,1495
+Hardware Adaptation,Allocation,81
+Hardware Adaptation,Configuration,126
+Hardware Adaptation,Logic Correction,1477
+Hardware Adaptation,Optimization,123
+Hardware Adaptation,Recovery,131
+Hardware Adaptation,Reorganization,182
+Hardware Adaptation,Synchronization,123
+Hardware Adaptation,Validation,179
+Operators/Backend,Adaptation,746
+Operators/Backend,Allocation,43
+Operators/Backend,Configuration,81
+Operators/Backend,Logic Correction,1279
+Operators/Backend,Optimization,67
+Operators/Backend,Recovery,69
+Operators/Backend,Reorganization,147
+Operators/Backend,Synchronization,38
+Operators/Backend,Validation,206
+Scheduler/Runtime,Adaptation,2305
+Scheduler/Runtime,Allocation,35
+Scheduler/Runtime,Configuration,239
+Scheduler/Runtime,Logic Correction,3816
+Scheduler/Runtime,Optimization,228
+Scheduler/Runtime,Recovery,228
+Scheduler/Runtime,Reorganization,450
+Scheduler/Runtime,Synchronization,163
+Scheduler/Runtime,Validation,515
+Tests/Bench,Adaptation,560
+Tests/Bench,Allocation,9
+Tests/Bench,Configuration,321
+Tests/Bench,Logic Correction,648
+Tests/Bench,Optimization,11
+Tests/Bench,Recovery,67
+Tests/Bench,Reorganization,87
+Tests/Bench,Synchronization,25
+Tests/Bench,Validation,111

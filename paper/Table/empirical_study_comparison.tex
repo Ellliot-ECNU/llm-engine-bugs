@@ -1,0 +1,24 @@
+\begin{table*}[t]
+  \centering
+  \caption{Comparison with empirical studies of bugs in AI infrastructure. Corpus gives analyzed artifacts / subject systems using each study's unit. Sym. = explicitly analyzed symptoms or observable impacts; Loc. = root causes and/or internal fault locations; S--L = explicit symptom/impact--cause/location associations; Rep. = recurring repair operations derived from code changes; Conc. = file/function-level concentration; Scope = patch scope covering both changed-line magnitude and modified-file breadth; Evol. = changes in bug or repair characteristics over calendar/project time. Loc. represents architectural locations, whereas Evol. represents their change over time. A checkmark denotes explicit coverage.}
+  \label{tab:empirical_study_comparison}
+  \small  
+  \setlength{\tabcolsep}{10pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{@{}l l r c c c c c c c@{}}
+    \toprule
+    Study & Domain & Corpus & Sym. & Loc. & S--L & Rep. & Conc. & Scope & Evol. \\
+    \midrule
+    Islam et al.~\cite{islam2019bugs} & DL applications & 3,216 / 5 & \checkmark & \checkmark & -- & -- & -- & -- & \checkmark \\
+    Humbatova et al.~\cite{humbatova2020taxonomy} & DL systems & 1,059 / 3 & -- & \checkmark & -- & -- & -- & -- & -- \\
+    Jia et al.~\cite{jia2021tensorflowbugs} & DL library & 202 / 1 & \checkmark & \checkmark & \checkmark & \checkmark & -- & -- & -- \\
+    Shen et al.~\cite{shen2021compilerbugs} & DL compilers & 603 / 3 & \checkmark & \checkmark & \checkmark & -- & -- & -- & -- \\
+    Du et al.~\cite{du2021compilerbugs} & DL compilers & 2,717 / 5 & \checkmark & \checkmark & \checkmark & -- & -- & -- & \checkmark \\
+    Yang et al.~\cite{yang2022frameworkbugs} & DL frameworks & 1,127 / 8 & \checkmark & \checkmark & -- & \checkmark & -- & -- & -- \\
+    Chen et al.~\cite{chen2023frameworkbugs} & DL frameworks & 1,000 / 4 & \checkmark & \checkmark & \checkmark & -- & -- & -- & -- \\
+    Liu et al.~\cite{liu2026firstlook} & LLM inference engines & 929 / 5 & \checkmark & \checkmark & \checkmark & \checkmark & -- & -- & \checkmark \\
+    \midrule
+    \textbf{Our work} & \textbf{LLM inference engines} & \textbf{12,707 / 6} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "data/final_bug_results_with_root_cause_completed_symptom_fixed_merged_fix_pattern.json": "6a562e46d59ce6fa2c3eb7ff49f7fd1c32f86811099dfe0d0c068bff0781b198",
+    "data/pareto/bug_file_distribution_weighted_alpha0.8_by_project.json": "3fab33dc7c63273d765ab047f15f291d34e786efe1f7eb84a68ff72597e4e19a",
+    "data/bug_function_distribution_weighted_alpha0.8_by_project.json": "de9e1dceda43aeed811220c1d4a5e742fa5fffd1c14a233d6dfd99b4297e5663",
+    "data/fix_size_stats.json": "ec0b21ad4af926b12b54d301df33681099a2738ad7a3179130a29d74cfe59e27"
+  },
+  "repair_operation_counting_rule": "one operation instance per recorded root-cause entry in the eight principal layers; residual operations excluded",
+  "repair_operation_instances": 19965,
+  "logic_correction_and_adaptation_instances": 14702,
+  "logic_correction_and_adaptation_share": 0.7363886801903331,
+  "operation_instances": {
+    "Logic Correction": 8728,
+    "Adaptation": 5974,
+    "Configuration": 1263,
+    "Validation": 1289,
+    "Reorganization": 1072,
+    "Recovery": 573,
+    "Optimization": 497,
+    "Synchronization": 391,
+    "Allocation": 178
+  },
+  "repair_operation_counts": [
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Adaptation",
+      "count": 143
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Configuration",
+      "count": 227
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Logic Correction",
+      "count": 102
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Recovery",
+      "count": 5
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Reorganization",
+      "count": 31
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Synchronization",
+      "count": 2
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "repair_operation": "Validation",
+      "count": 15
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Adaptation",
+      "count": 267
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Allocation",
+      "count": 4
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Configuration",
+      "count": 29
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Logic Correction",
+      "count": 314
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Optimization",
+      "count": 39
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Recovery",
+      "count": 10
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Reorganization",
+      "count": 17
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Synchronization",
+      "count": 11
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "repair_operation": "Validation",
+      "count": 31
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Adaptation",
+      "count": 442
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Allocation",
+      "count": 6
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Configuration",
+      "count": 187
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Logic Correction",
+      "count": 896
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Optimization",
+      "count": 29
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Recovery",
+      "count": 61
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Reorganization",
+      "count": 158
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Synchronization",
+      "count": 29
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "repair_operation": "Validation",
+      "count": 231
+    },
+    {
+      "architectural_layer": "Docs",
+      "repair_operation": "Adaptation",
+      "count": 16
+    },
+    {
+      "architectural_layer": "Docs",
+      "repair_operation": "Configuration",
+      "count": 53
+    },
+    {
+      "architectural_layer": "Docs",
+      "repair_operation": "Logic Correction",
+      "count": 196
+    },
+    {
+      "architectural_layer": "Docs",
+      "repair_operation": "Recovery",
+      "count": 2
+    },
+    {
+      "architectural_layer": "Docs",
+      "repair_operation": "Validation",
+      "count": 1
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Adaptation",
+      "count": 1495
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Allocation",
+      "count": 81
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Configuration",
+      "count": 126
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Logic Correction",
+      "count": 1477
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Optimization",
+      "count": 123
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Recovery",
+      "count": 131
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Reorganization",
+      "count": 182
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Synchronization",
+      "count": 123
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "repair_operation": "Validation",
+      "count": 179
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Adaptation",
+      "count": 746
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Allocation",
+      "count": 43
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Configuration",
+      "count": 81
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Logic Correction",
+      "count": 1279
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Optimization",
+      "count": 67
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Recovery",
+      "count": 69
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Reorganization",
+      "count": 147
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Synchronization",
+      "count": 38
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "repair_operation": "Validation",
+      "count": 206
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Adaptation",
+      "count": 2305
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Allocation",
+      "count": 35
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Configuration",
+      "count": 239
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Logic Correction",
+      "count": 3816
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Optimization",
+      "count": 228
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Recovery",
+      "count": 228
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Reorganization",
+      "count": 450
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Synchronization",
+      "count": 163
+    },
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "repair_operation": "Validation",
+      "count": 515
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Adaptation",
+      "count": 560
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Allocation",
+      "count": 9
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Configuration",
+      "count": 321
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Logic Correction",
+      "count": 648
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Optimization",
+      "count": 11
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Recovery",
+      "count": 67
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Reorganization",
+      "count": 87
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Synchronization",
+      "count": 25
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "repair_operation": "Validation",
+      "count": 111
+    }
+  ],
+  "architectural_layer_summary": [
+    {
+      "architectural_layer": "Scheduler/Runtime",
+      "instances": 7979,
+      "logic_correction_and_adaptation_share": 0.7671387391903748,
+      "configuration_share": 0.029953628274219827
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "instances": 3917,
+      "logic_correction_and_adaptation_share": 0.7587439366862395,
+      "configuration_share": 0.0321674751085014
+    },
+    {
+      "architectural_layer": "Operators/Backend",
+      "instances": 2676,
+      "logic_correction_and_adaptation_share": 0.7567264573991032,
+      "configuration_share": 0.030269058295964126
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "instances": 2039,
+      "logic_correction_and_adaptation_share": 0.6562040215792055,
+      "configuration_share": 0.09171162334477685
+    },
+    {
+      "architectural_layer": "Tests/Bench",
+      "instances": 1839,
+      "logic_correction_and_adaptation_share": 0.6568787384448069,
+      "configuration_share": 0.17455138662316477
+    },
+    {
+      "architectural_layer": "Compiler/Optimization",
+      "instances": 722,
+      "logic_correction_and_adaptation_share": 0.8047091412742382,
+      "configuration_share": 0.04016620498614958
+    },
+    {
+      "architectural_layer": "Build/Release",
+      "instances": 525,
+      "logic_correction_and_adaptation_share": 0.4666666666666667,
+      "configuration_share": 0.43238095238095237
+    },
+    {
+      "architectural_layer": "Docs",
+      "instances": 268,
+      "logic_correction_and_adaptation_share": 0.7910447761194029,
+      "configuration_share": 0.19776119402985073
+    }
+  ],
+  "file_concentration": {
+    "entity_count": 8025,
+    "weighted_bug_total": 12707.0,
+    "top_20_percent_cover": 0.7962813848061843,
+    "projects": {
+      "llama.cpp": {
+        "entity_count": 1311,
+        "weighted_bug_total": 3004.0,
+        "top_20_percent_cover": 0.8505276132401797
+      },
+      "vLLM": {
+        "entity_count": 3263,
+        "weighted_bug_total": 5915.0,
+        "top_20_percent_cover": 0.7667904349027195
+      },
+      "DeepSpeed": {
+        "entity_count": 732,
+        "weighted_bug_total": 1118.0,
+        "top_20_percent_cover": 0.7842302320231838
+      },
+      "MLC-LLM": {
+        "entity_count": 476,
+        "weighted_bug_total": 487.0,
+        "top_20_percent_cover": 0.6931919016678579
+      },
+      "TensorRT-LLM": {
+        "entity_count": 1838,
+        "weighted_bug_total": 1784.0,
+        "top_20_percent_cover": 0.7925599767957908
+      },
+      "TGI": {
+        "entity_count": 405,
+        "weighted_bug_total": 399.0,
+        "top_20_percent_cover": 0.7429672978509374
+      }
+    }
+  },
+  "function_concentration": {
+    "entity_count": 26565,
+    "weighted_bug_total": 11526.0,
+    "top_20_percent_cover": 0.6842039663867607,
+    "projects": {
+      "llama.cpp": {
+        "entity_count": 5489,
+        "weighted_bug_total": 2596.0,
+        "top_20_percent_cover": 0.6938605125212567
+      },
+      "vLLM": {
+        "entity_count": 12554,
+        "weighted_bug_total": 5511.0,
+        "top_20_percent_cover": 0.6878529432674034
+      },
+      "DeepSpeed": {
+        "entity_count": 2351,
+        "weighted_bug_total": 1015.0,
+        "top_20_percent_cover": 0.6722130157794028
+      },
+      "MLC-LLM": {
+        "entity_count": 1058,
+        "weighted_bug_total": 442.0,
+        "top_20_percent_cover": 0.6167589650421147
+      },
+      "TensorRT-LLM": {
+        "entity_count": 4420,
+        "weighted_bug_total": 1619.0,
+        "top_20_percent_cover": 0.6747542610201223
+      },
+      "TGI": {
+        "entity_count": 693,
+        "weighted_bug_total": 343.0,
+        "top_20_percent_cover": 0.6449313082749158
+      }
+    }
+  },
+  "fix_size_overall": {
+    "count": 12707,
+    "mean": 186.68,
+    "median": 14.0,
+    "p25": 4.0,
+    "p75": 52.0,
+    "p90": 165.0,
+    "p95": 326.7,
+    "max": 1028968.0
+  },
+  "fix_size_by_file_bucket": [
+    {
+      "group": "1 file",
+      "count": 6883,
+      "mean": 17.29,
+      "median": 6.0,
+      "p25": 2.0,
+      "p75": 14.0,
+      "p90": 32.0,
+      "p95": 55.0,
+      "max": 6079.0
+    },
+    {
+      "group": "2-5 files",
+      "count": 4672,
+      "mean": 110.23,
+      "median": 35.0,
+      "p25": 15.0,
+      "p75": 87.0,
+      "p90": 179.0,
+      "p95": 289.0,
+      "max": 87981.0
+    },
+    {
+      "group": "6+ files",
+      "count": 1152,
+      "mean": 1508.75,
+      "median": 213.5,
+      "p25": 89.0,
+      "p75": 468.25,
+      "p90": 1043.5,
+      "p95": 1719.6,
+      "max": 1028968.0
+    }
+  ],
+  "patch_derivation_note": "complete diffs are not redistributed; fix_size_stats.json contains the published per-PR derived measures"
+}

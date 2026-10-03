@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "data/monthly_file_bucket_counts.json": "9939abf47701fe2c74385125ecc6e18a3ade1b4531d933c1c62605bf55cb7ad3",
+    "results/rq3_layer_trends/rq3_layer_trend_results.json": "cb34306a1ee14d94dae26e7f33d2496e74f810cdc24c90351a8758a290156ee5"
+  },
+  "analysis_window": {
+    "start_month": "2023-01",
+    "end_month": "2026-03",
+    "fixes": 12299,
+    "months": 39
+  },
+  "file_breadth_first_month": {
+    "total": 32,
+    "1 file": {
+      "count": 18,
+      "percentage": 56.25
+    },
+    "2-5 files": {
+      "count": 10,
+      "percentage": 31.25
+    },
+    "6+ files": {
+      "count": 4,
+      "percentage": 12.5
+    }
+  },
+  "file_breadth_last_month": {
+    "total": 859,
+    "1 file": {
+      "count": 405,
+      "percentage": 47.147846332945285
+    },
+    "2-5 files": {
+      "count": 359,
+      "percentage": 41.79278230500582
+    },
+    "6+ files": {
+      "count": 95,
+      "percentage": 11.059371362048894
+    }
+  },
+  "architectural_layer_trends": [
+    {
+      "layer": "Hardware Adaptation",
+      "first_window_mean_monthly_share_pct": 6.442812063935914,
+      "last_window_mean_monthly_share_pct": 23.656412413019243,
+      "change_percentage_points": 17.21360034908333,
+      "pooled_spearman_rho": 0.7809099660792989,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": 7.256228590063433,
+      "adjusted_spearman_rho": 0.7394098901113777,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": 6.613432811215983
+    },
+    {
+      "layer": "Tests/Bench",
+      "first_window_mean_monthly_share_pct": 3.2190035939018027,
+      "last_window_mean_monthly_share_pct": 12.480932841714209,
+      "change_percentage_points": 9.261929247812406,
+      "pooled_spearman_rho": 0.8218027238623238,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": 3.749285157919006,
+      "adjusted_spearman_rho": 0.6751012145748988,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": 2.608126941217837
+    },
+    {
+      "layer": "Config/Entrypoint",
+      "first_window_mean_monthly_share_pct": 4.874735187444068,
+      "last_window_mean_monthly_share_pct": 10.420235649875625,
+      "change_percentage_points": 5.545500462431558,
+      "pooled_spearman_rho": 0.5641985937687637,
+      "pooled_permutation_p": 0.00024998750062496874,
+      "pooled_bh_q": 0.0003214125008035312,
+      "pooled_slope_pp_per_year": 2.659803516358174,
+      "adjusted_spearman_rho": 0.2388784860592541,
+      "adjusted_permutation_p": 0.1391430428478576,
+      "adjusted_bh_q": 0.2087145642717864,
+      "adjusted_slope_pp_per_year": 1.3157878895658954
+    },
+    {
+      "layer": "Compiler/Optimization",
+      "first_window_mean_monthly_share_pct": 2.07108433963573,
+      "last_window_mean_monthly_share_pct": 4.039845478920337,
+      "change_percentage_points": 1.9687611392846067,
+      "pooled_spearman_rho": 0.5245570292654463,
+      "pooled_permutation_p": 0.00039998000099995,
+      "pooled_bh_q": 0.00044997750112494374,
+      "pooled_slope_pp_per_year": 0.9770690524928456,
+      "adjusted_spearman_rho": 0.4433418289814911,
+      "adjusted_permutation_p": 0.0050497475126243686,
+      "adjusted_bh_q": 0.009089545522723863,
+      "adjusted_slope_pp_per_year": 1.0112021674920482
+    },
+    {
+      "layer": "Scheduler/Runtime",
+      "first_window_mean_monthly_share_pct": 44.08844214655905,
+      "last_window_mean_monthly_share_pct": 33.58705282800407,
+      "change_percentage_points": -10.501389318554985,
+      "pooled_spearman_rho": -0.3819838056680162,
+      "pooled_permutation_p": 0.017049147542622867,
+      "pooled_bh_q": 0.017049147542622867,
+      "pooled_slope_pp_per_year": -4.0611905788744735,
+      "adjusted_spearman_rho": -0.6684210526315789,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": -9.367958152765732
+    },
+    {
+      "layer": "Docs",
+      "first_window_mean_monthly_share_pct": 2.8226425133152566,
+      "last_window_mean_monthly_share_pct": 1.1148712223447432,
+      "change_percentage_points": -1.7077712909705134,
+      "pooled_spearman_rho": -0.5763157894736842,
+      "pooled_permutation_p": 9.99950002499875e-05,
+      "pooled_bh_q": 0.00014999250037498125,
+      "pooled_slope_pp_per_year": -0.8747770968729165,
+      "adjusted_spearman_rho": -0.15445344129554656,
+      "adjusted_permutation_p": 0.34658267086645667,
+      "adjusted_bh_q": 0.38990550472476376,
+      "adjusted_slope_pp_per_year": -0.3628839795891463
+    },
+    {
+      "layer": "Operators/Backend",
+      "first_window_mean_monthly_share_pct": 22.448602646795962,
+      "last_window_mean_monthly_share_pct": 9.105951817822442,
+      "change_percentage_points": -13.34265082897352,
+      "pooled_spearman_rho": -0.6536437246963563,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -6.020458615812356,
+      "adjusted_spearman_rho": -0.15566801619433202,
+      "adjusted_permutation_p": 0.3413329333533323,
+      "adjusted_bh_q": 0.38990550472476376,
+      "adjusted_slope_pp_per_year": -0.0726285820773253
+    },
+    {
+      "layer": "Other",
+      "first_window_mean_monthly_share_pct": 6.824583237289983,
+      "last_window_mean_monthly_share_pct": 3.6966086146562436,
+      "change_percentage_points": -3.1279746226337393,
+      "pooled_spearman_rho": -0.6696356275303644,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -1.493655774723127,
+      "adjusted_spearman_rho": -0.13724696356275304,
+      "adjusted_permutation_p": 0.40427978601069947,
+      "adjusted_bh_q": 0.40427978601069947,
+      "adjusted_slope_pp_per_year": -0.28659367791927437
+    },
+    {
+      "layer": "Build/Release",
+      "first_window_mean_monthly_share_pct": 7.208094271122243,
+      "last_window_mean_monthly_share_pct": 1.8980891336430838,
+      "change_percentage_points": -5.310005137479159,
+      "pooled_spearman_rho": -0.7890688259109312,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -2.19230425055059,
+      "adjusted_spearman_rho": -0.6449392712550607,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": -1.4584854171402883
+    }
+  ],
+  "interpretation_boundary": "monthly layer shares are compositional and describe observed fixing activity, not causal changes in reliability"
+}

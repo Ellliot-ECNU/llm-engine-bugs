@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "analysis": {
+    "input_bug_records": 12707,
+    "input_timestamp_records": 12707,
+    "canonical_fixes": 12707,
+    "canonical_fixes_with_timestamps": 12707,
+    "canonical_layer_field_disagreements": 0,
+    "window_fixes": 12299,
+    "start_month": "2023-01",
+    "end_month": "2026-03",
+    "month_count": 39,
+    "window_months": 12,
+    "permutations": 20000,
+    "seed": 2026,
+    "permutation_test": "two-sided Spearman; (exceedances + 1) / (permutations + 1)",
+    "multiple_testing": "Benjamini-Hochberg across nine architectural layers",
+    "first_last_summary": "equal-weight arithmetic mean of monthly shares",
+    "slope_unit": "percentage points per year",
+    "canonical_checks_enabled": true
+  },
+  "inputs": {
+    "bugs": {
+      "path": "data/final_bug_results_with_root_cause_completed_symptom.json",
+      "sha256": "de72f0dbbb7a5f8c151637ec5b285b567f1cc8695cbe3991c114c3e2fce42d7a"
+    },
+    "timestamps": {
+      "path": "data/bug_timestamps.json",
+      "sha256": "30d4414af66b0715418e65de46eece7beaa10a2d89247f1b0757efdb57e653c4"
+    }
+  },
+  "filters": {
+    "is_bug_related": true,
+    "status_case_insensitive": "fixed",
+    "pr_status_case_insensitive": "merged",
+    "timestamp": "PR creation month"
+  },
+  "layer_weighting": "deduplicate assigned layers; contribute 1/k to each of k layers",
+  "project_standardization": "fixed full-window project weights, renormalized over active projects each month",
+  "project_counts": {
+    "DeepSpeed": 715,
+    "text-generation-inference": 394,
+    "vllm": 5915,
+    "llama.cpp": 3004,
+    "mlc-llm": 487,
+    "TensorRT-LLM": 1784
+  },
+  "fixed_project_weights": {
+    "DeepSpeed": 0.058134807707943735,
+    "TensorRT-LLM": 0.1450524432880722,
+    "llama.cpp": 0.24424749979673144,
+    "mlc-llm": 0.03959671518009594,
+    "text-generation-inference": 0.03203512480689487,
+    "vllm": 0.4809334092202618
+  },
+  "layer_results": [
+    {
+      "layer": "Hardware Adaptation",
+      "first_window_mean_monthly_share_pct": 6.442812063935914,
+      "last_window_mean_monthly_share_pct": 23.656412413019243,
+      "change_percentage_points": 17.21360034908333,
+      "pooled_spearman_rho": 0.7809099660792989,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": 7.256228590063433,
+      "adjusted_spearman_rho": 0.7394098901113777,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": 6.613432811215983
+    },
+    {
+      "layer": "Tests/Bench",
+      "first_window_mean_monthly_share_pct": 3.2190035939018027,
+      "last_window_mean_monthly_share_pct": 12.480932841714209,
+      "change_percentage_points": 9.261929247812406,
+      "pooled_spearman_rho": 0.8218027238623238,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": 3.749285157919006,
+      "adjusted_spearman_rho": 0.6751012145748988,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": 2.608126941217837
+    },
+    {
+      "layer": "Config/Entrypoint",
+      "first_window_mean_monthly_share_pct": 4.874735187444068,
+      "last_window_mean_monthly_share_pct": 10.420235649875625,
+      "change_percentage_points": 5.545500462431558,
+      "pooled_spearman_rho": 0.5641985937687637,
+      "pooled_permutation_p": 0.00024998750062496874,
+      "pooled_bh_q": 0.0003214125008035312,
+      "pooled_slope_pp_per_year": 2.659803516358174,
+      "adjusted_spearman_rho": 0.2388784860592541,
+      "adjusted_permutation_p": 0.1391430428478576,
+      "adjusted_bh_q": 0.2087145642717864,
+      "adjusted_slope_pp_per_year": 1.3157878895658954
+    },
+    {
+      "layer": "Compiler/Optimization",
+      "first_window_mean_monthly_share_pct": 2.07108433963573,
+      "last_window_mean_monthly_share_pct": 4.039845478920337,
+      "change_percentage_points": 1.9687611392846067,
+      "pooled_spearman_rho": 0.5245570292654463,
+      "pooled_permutation_p": 0.00039998000099995,
+      "pooled_bh_q": 0.00044997750112494374,
+      "pooled_slope_pp_per_year": 0.9770690524928456,
+      "adjusted_spearman_rho": 0.4433418289814911,
+      "adjusted_permutation_p": 0.0050497475126243686,
+      "adjusted_bh_q": 0.009089545522723863,
+      "adjusted_slope_pp_per_year": 1.0112021674920482
+    },
+    {
+      "layer": "Scheduler/Runtime",
+      "first_window_mean_monthly_share_pct": 44.08844214655905,
+      "last_window_mean_monthly_share_pct": 33.58705282800407,
+      "change_percentage_points": -10.501389318554985,
+      "pooled_spearman_rho": -0.3819838056680162,
+      "pooled_permutation_p": 0.017049147542622867,
+      "pooled_bh_q": 0.017049147542622867,
+      "pooled_slope_pp_per_year": -4.0611905788744735,
+      "adjusted_spearman_rho": -0.6684210526315789,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": -9.367958152765732
+    },
+    {
+      "layer": "Docs",
+      "first_window_mean_monthly_share_pct": 2.8226425133152566,
+      "last_window_mean_monthly_share_pct": 1.1148712223447432,
+      "change_percentage_points": -1.7077712909705134,
+      "pooled_spearman_rho": -0.5763157894736842,
+      "pooled_permutation_p": 9.99950002499875e-05,
+      "pooled_bh_q": 0.00014999250037498125,
+      "pooled_slope_pp_per_year": -0.8747770968729165,
+      "adjusted_spearman_rho": -0.15445344129554656,
+      "adjusted_permutation_p": 0.34658267086645667,
+      "adjusted_bh_q": 0.38990550472476376,
+      "adjusted_slope_pp_per_year": -0.3628839795891463
+    },
+    {
+      "layer": "Operators/Backend",
+      "first_window_mean_monthly_share_pct": 22.448602646795962,
+      "last_window_mean_monthly_share_pct": 9.105951817822442,
+      "change_percentage_points": -13.34265082897352,
+      "pooled_spearman_rho": -0.6536437246963563,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -6.020458615812356,
+      "adjusted_spearman_rho": -0.15566801619433202,
+      "adjusted_permutation_p": 0.3413329333533323,
+      "adjusted_bh_q": 0.38990550472476376,
+      "adjusted_slope_pp_per_year": -0.0726285820773253
+    },
+    {
+      "layer": "Other",
+      "first_window_mean_monthly_share_pct": 6.824583237289983,
+      "last_window_mean_monthly_share_pct": 3.6966086146562436,
+      "change_percentage_points": -3.1279746226337393,
+      "pooled_spearman_rho": -0.6696356275303644,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -1.493655774723127,
+      "adjusted_spearman_rho": -0.13724696356275304,
+      "adjusted_permutation_p": 0.40427978601069947,
+      "adjusted_bh_q": 0.40427978601069947,
+      "adjusted_slope_pp_per_year": -0.28659367791927437
+    },
+    {
+      "layer": "Build/Release",
+      "first_window_mean_monthly_share_pct": 7.208094271122243,
+      "last_window_mean_monthly_share_pct": 1.8980891336430838,
+      "change_percentage_points": -5.310005137479159,
+      "pooled_spearman_rho": -0.7890688259109312,
+      "pooled_permutation_p": 4.999750012499375e-05,
+      "pooled_bh_q": 8.999550022498874e-05,
+      "pooled_slope_pp_per_year": -2.19230425055059,
+      "adjusted_spearman_rho": -0.6449392712550607,
+      "adjusted_permutation_p": 4.999750012499375e-05,
+      "adjusted_bh_q": 0.00011249437528123593,
+      "adjusted_slope_pp_per_year": -1.4584854171402883
+    }
+  ],
+  "per_project_results": [
+    {
+      "project": "DeepSpeed",
+      "layer": "Hardware Adaptation",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.10633407368032155,
+      "slope_pp_per_year": 0.9821356826452525
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Tests/Bench",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.09876342248699103,
+      "slope_pp_per_year": 0.3058879930572088
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Config/Entrypoint",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.159185908075764,
+      "slope_pp_per_year": 0.45066334930381224
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Compiler/Optimization",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.008609553815803904,
+      "slope_pp_per_year": 0.5238067026281337
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.08553930351182176,
+      "slope_pp_per_year": 1.2407569519008215
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Docs",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.3006561943044991,
+      "slope_pp_per_year": -1.0297450006540143
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Operators/Backend",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.2414112164823605,
+      "slope_pp_per_year": -1.0360227822044425
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Other",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.22247480586861673,
+      "slope_pp_per_year": -0.5835267945231362
+    },
+    {
+      "project": "DeepSpeed",
+      "layer": "Build/Release",
+      "fix_count": 715,
+      "active_months": 39,
+      "first_active_month": "2023-01",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.3750503952113678,
+      "slope_pp_per_year": -0.8539561021536279
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Hardware Adaptation",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.12065753916868087,
+      "slope_pp_per_year": 6.6316246969014365
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Tests/Bench",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.2547516827511838,
+      "slope_pp_per_year": -0.10646515864349275
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Config/Entrypoint",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.8979370634402309,
+      "slope_pp_per_year": 2.6457843470827003
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Compiler/Optimization",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.6498375609121204,
+      "slope_pp_per_year": 0.5680915496444381
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.34289857310599453,
+      "slope_pp_per_year": -4.243923204986876
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Docs",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.1852097564057338,
+      "slope_pp_per_year": -8.576328096897832
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Operators/Backend",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": NaN,
+      "slope_pp_per_year": 0.0
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Other",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.7644352189776306,
+      "slope_pp_per_year": 2.417342716564562
+    },
+    {
+      "project": "TensorRT-LLM",
+      "layer": "Build/Release",
+      "fix_count": 1784,
+      "active_months": 24,
+      "first_active_month": "2023-10",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.7666379133953461,
+      "slope_pp_per_year": 0.6638731503350593
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Hardware Adaptation",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.5071123755334281,
+      "slope_pp_per_year": 5.57996799510733
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Tests/Bench",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.03938660993207357,
+      "slope_pp_per_year": -0.09722732890095083
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Config/Entrypoint",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.4282665522358506,
+      "slope_pp_per_year": 2.705669320526615
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Compiler/Optimization",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.24753743934309225,
+      "slope_pp_per_year": 0.12037832259889912
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.28022759601706965,
+      "slope_pp_per_year": -1.1466807347543833
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Docs",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.10296307885853957,
+      "slope_pp_per_year": -0.15390835985309748
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Operators/Backend",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.20436225699383592,
+      "slope_pp_per_year": -2.2810160767317256
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Other",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.4270049204347695,
+      "slope_pp_per_year": -1.2632451226779915
+    },
+    {
+      "project": "llama.cpp",
+      "layer": "Build/Release",
+      "fix_count": 3004,
+      "active_months": 37,
+      "first_active_month": "2023-03",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.6320531057373162,
+      "slope_pp_per_year": -3.463938015314699
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Hardware Adaptation",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.046566292195284326,
+      "slope_pp_per_year": 1.630954645688701
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Tests/Bench",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.03477826507156452,
+      "slope_pp_per_year": 0.7191807720336378
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Config/Entrypoint",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.03975216134078388,
+      "slope_pp_per_year": 3.541903729493903
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Compiler/Optimization",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.2561426041184675,
+      "slope_pp_per_year": 10.345573639004506
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.2513427948841131,
+      "slope_pp_per_year": -8.594660401384361
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Docs",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.6337976481522298,
+      "slope_pp_per_year": -3.516105694952718
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Operators/Backend",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.337801811639329,
+      "slope_pp_per_year": -2.0882277123446333
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Other",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.4334545622673288,
+      "slope_pp_per_year": -2.559609633536606
+    },
+    {
+      "project": "MLC-LLM",
+      "layer": "Build/Release",
+      "fix_count": 487,
+      "active_months": 33,
+      "first_active_month": "2023-05",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.16249418650971814,
+      "slope_pp_per_year": 0.5209906559975637
+    },
+    {
+      "project": "TGI",
+      "layer": "Hardware Adaptation",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.4701091091436264,
+      "slope_pp_per_year": 9.511658893700643
+    },
+    {
+      "project": "TGI",
+      "layer": "Tests/Bench",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.06606052062685963,
+      "slope_pp_per_year": 0.3558764095054022
+    },
+    {
+      "project": "TGI",
+      "layer": "Config/Entrypoint",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.3198989956400954,
+      "slope_pp_per_year": 13.99542806763936
+    },
+    {
+      "project": "TGI",
+      "layer": "Compiler/Optimization",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.17451709537331897,
+      "slope_pp_per_year": 0.17132734808519176
+    },
+    {
+      "project": "TGI",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": -0.6946051785521157,
+      "slope_pp_per_year": -23.879637151064962
+    },
+    {
+      "project": "TGI",
+      "layer": "Docs",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.03577192978789493,
+      "slope_pp_per_year": 2.2036415809356344
+    },
+    {
+      "project": "TGI",
+      "layer": "Operators/Backend",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": NaN,
+      "slope_pp_per_year": 0.0
+    },
+    {
+      "project": "TGI",
+      "layer": "Other",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": 0.004020111556427424,
+      "slope_pp_per_year": -0.8371837293547688
+    },
+    {
+      "project": "TGI",
+      "layer": "Build/Release",
+      "fix_count": 394,
+      "active_months": 33,
+      "first_active_month": "2023-01",
+      "last_active_month": "2025-12",
+      "spearman_rho": -0.1586901214335085,
+      "slope_pp_per_year": -1.5211114194465138
+    },
+    {
+      "project": "vLLM",
+      "layer": "Hardware Adaptation",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.7444344707721898,
+      "slope_pp_per_year": 2.1773908794303134
+    },
+    {
+      "project": "vLLM",
+      "layer": "Tests/Bench",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.6756864852191646,
+      "slope_pp_per_year": 3.3762776981147713
+    },
+    {
+      "project": "vLLM",
+      "layer": "Config/Entrypoint",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.004049469288211586,
+      "slope_pp_per_year": 0.1701363319630191
+    },
+    {
+      "project": "vLLM",
+      "layer": "Compiler/Optimization",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.41170208687181337,
+      "slope_pp_per_year": 1.2745618311164975
+    },
+    {
+      "project": "vLLM",
+      "layer": "Scheduler/Runtime",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.4341687747658206,
+      "slope_pp_per_year": -7.337011827235505
+    },
+    {
+      "project": "vLLM",
+      "layer": "Docs",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.1191764721279579,
+      "slope_pp_per_year": 0.023084093157520046
+    },
+    {
+      "project": "vLLM",
+      "layer": "Operators/Backend",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.2474568528467883,
+      "slope_pp_per_year": 0.21279098401611485
+    },
+    {
+      "project": "vLLM",
+      "layer": "Other",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": 0.28132512385197955,
+      "slope_pp_per_year": 0.6894863567181565
+    },
+    {
+      "project": "vLLM",
+      "layer": "Build/Release",
+      "fix_count": 5915,
+      "active_months": 38,
+      "first_active_month": "2023-02",
+      "last_active_month": "2026-03",
+      "spearman_rho": -0.1898555278653493,
+      "slope_pp_per_year": -0.5867163472809004
+    }
+  ]
+}

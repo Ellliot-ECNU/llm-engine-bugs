@@ -1,0 +1,23 @@
+\begin{table}[t]
+    \centering
+    \caption{Architectural layer \(\times\) repair operation counts.}
+    \label{tab:repair_counts}
+    \resizebox{\linewidth}{!}{%
+        \begin{tabular}{l c c c c c c c c c}
+            \toprule
+            \diagbox[width=2.4cm, height=0.6cm]{\textbf{Layer}}{\raisebox{0pt}{\hspace{1.25cm}\textbf{Operation}}}
+            & \textbf{Corr.} & \textbf{Adapt.} & \textbf{Config.} & \textbf{Valid.} & \textbf{Reorg.} & \textbf{Recov.} & \textbf{Optim.} & \textbf{Sync.} & \textbf{Alloc.} \\[-0.18cm]
+            & (Cor) & (Adp) & (Cf) & (Val) & (Rg) & (Rv) & (Opt) & (S) & (Al) \\[+0cm]
+            \midrule
+            Scheduler/Runtime & 3816 & 2305 & 239 & 515 & 450 & 228 & 228 & 163 & 35 \\
+            Hardware Adapt. & 1477 & 1495 & 126 & 179 & 182 & 131 & 123 & 123 & 81 \\
+            Operators/Backend & 1279 & 746 & 81 & 206 & 147 & 69 & 67 & 38 & 43 \\
+            Config/Entrypoint & 896 & 442 & 187 & 231 & 158 & 61 & 29 & 29 & 6 \\
+            Tests/Bench & 648 & 560 & 321 & 111 & 87 & 67 & 11 & 25 & 9 \\
+            Compiler/Optim. & 314 & 267 & 29 & 31 & 17 & 10 & 39 & 11 & 4 \\
+            Build/Release & 102 & 143 & 227 & 15 & 31 & 5 & 0 & 2 & 0 \\
+            Docs & 196 & 16 & 53 & 1 & 0 & 2 & 0 & 0 & 0 \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}

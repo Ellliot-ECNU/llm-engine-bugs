@@ -1,0 +1,25 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# LaTeX intermediates (the inspection PDF may remain tracked)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+
+# Generated figures under figures/generated/ are part of the public artifact.
+# Keep them tracked so readers can inspect the published outputs directly.
+
+# Credentials
+.env
+.env.*
+key.txt
+githubtoken.txt

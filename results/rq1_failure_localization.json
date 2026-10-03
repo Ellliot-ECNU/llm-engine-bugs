@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "data/final_bug_results_with_root_cause_completed_symptom.json": "de72f0dbbb7a5f8c151637ec5b285b567f1cc8695cbe3991c114c3e2fce42d7a"
+  },
+  "counting_rule": "one normalized symptom per fix; distinct architectural layers receive 1/k weight",
+  "canonical_fixes": 12707,
+  "symptom_counts": {
+    "API/argument parsing Error": 2845,
+    "Incorrect/Inaccuracy Output": 2271,
+    "Performance/Memory Issue": 1857,
+    "Build/Compilation Error": 1837,
+    "Hardware/Backend Compatibility Issue": 1239,
+    "Runtime Crash": 1154,
+    "Model Loading Error": 576,
+    "Distributed Parallelism/Sharding Bug": 545,
+    "Other": 271,
+    "Security Vulnerability": 112
+  },
+  "correctness_or_availability_fixes": 4001,
+  "correctness_or_availability_share": 0.3148658219878807,
+  "project_symptom_summary": [
+    {
+      "project": "llama.cpp",
+      "fixes": 3004,
+      "leading_symptom": "Incorrect/Inaccuracy Output",
+      "leading_symptom_count": 629,
+      "leading_symptom_share": 0.20938748335552596,
+      "top_three_share": 0.5922103861517976
+    },
+    {
+      "project": "vLLM",
+      "fixes": 5915,
+      "leading_symptom": "API/argument parsing Error",
+      "leading_symptom_count": 1420,
+      "leading_symptom_share": 0.2400676246830093,
+      "top_three_share": 0.5413355874894337
+    },
+    {
+      "project": "DeepSpeed",
+      "fixes": 1118,
+      "leading_symptom": "API/argument parsing Error",
+      "leading_symptom_count": 245,
+      "leading_symptom_share": 0.21914132379248658,
+      "top_three_share": 0.5250447227191414
+    },
+    {
+      "project": "MLC-LLM",
+      "fixes": 487,
+      "leading_symptom": "API/argument parsing Error",
+      "leading_symptom_count": 135,
+      "leading_symptom_share": 0.27720739219712526,
+      "top_three_share": 0.7002053388090349
+    },
+    {
+      "project": "TensorRT-LLM",
+      "fixes": 1784,
+      "leading_symptom": "Performance/Memory Issue",
+      "leading_symptom_count": 449,
+      "leading_symptom_share": 0.25168161434977576,
+      "top_three_share": 0.6395739910313901
+    },
+    {
+      "project": "TGI",
+      "fixes": 399,
+      "leading_symptom": "API/argument parsing Error",
+      "leading_symptom_count": 120,
+      "leading_symptom_share": 0.3007518796992481,
+      "top_three_share": 0.6290726817042607
+    }
+  ],
+  "weighted_layer_totals": {
+    "Scheduler/Runtime": 4887.833333333331,
+    "Hardware Adaptation": 2122.999999999999,
+    "Operators/Backend": 1660.1666666666652,
+    "Config/Entrypoint": 1276.333333333333,
+    "Tests/Bench": 1151.666666666667,
+    "Other": 571.8333333333333,
+    "Compiler/Optimization": 431.9999999999999,
+    "Build/Release": 399.3333333333332,
+    "Docs": 204.83333333333334
+  },
+  "selected_symptom_layer_associations": [
+    {
+      "architectural_layer": "Build/Release",
+      "symptom": "Build/Compilation Error",
+      "weighted_association": 344.0,
+      "weighted_layer_total": 399.3333333333332,
+      "within_layer_share": 0.8614357262103509,
+      "lift": 5.958771787128431
+    },
+    {
+      "architectural_layer": "Config/Entrypoint",
+      "symptom": "API/argument parsing Error",
+      "weighted_association": 677.0,
+      "weighted_layer_total": 1276.333333333333,
+      "within_layer_share": 0.5304256986158267,
+      "lift": 2.3691104929037996
+    },
+    {
+      "architectural_layer": "Hardware Adaptation",
+      "symptom": "Hardware/Backend Compatibility Issue",
+      "weighted_association": 411.83333333333326,
+      "weighted_layer_total": 2122.999999999999,
+      "within_layer_share": 0.19398649709530544,
+      "lift": 1.9894967058838144
+    }
+  ]
+}

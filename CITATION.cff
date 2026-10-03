@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated paper."
+title: "Understanding the Structure and Evolution of Bug Maintenance in LLM Inference Engines"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Jiachen
+  - family-names: Zeng
+    given-names: Chaoning
+  - family-names: Zhou
+    given-names: Chijin
+  - family-names: Zhang
+    given-names: Quan
+  - family-names: Jiang
+    given-names: Yu
+  - family-names: Pu
+    given-names: Geguang
+repository-code: "https://github.com/Ellliot-ECNU/llm-engine-bugs"
+
